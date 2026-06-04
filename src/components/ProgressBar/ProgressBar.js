@@ -6,6 +6,11 @@ import { COLORS } from "../../constants";
 
 const ProgressBar = ({ value, size }) => {
   const styles = STYLES_BY_SIZE[size];
+
+  if (!styles) {
+    throw new Error(`Unknown size passed to ProgressBar: ${size}`);
+  }
+
   return (
     <Wrapper role="progressbar" aria-valuenow={value} style={styles}>
       <BarWrapper>
