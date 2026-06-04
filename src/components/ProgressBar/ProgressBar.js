@@ -39,11 +39,9 @@ const Wrapper = styled.div`
   border-radius: var(--border-radius);
   background-color: ${COLORS.transparentGray15};
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
-  overflow: hidden;
 `;
 
 const BarWrapper = styled.div`
-  width: 100%;
   height: 100%;
   border-radius: 4px;
   overflow: hidden;
