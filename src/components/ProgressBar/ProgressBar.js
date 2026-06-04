@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { COLORS } from "../../constants";
-import VisuallyHidden from "../VisuallyHidden";
 
 const ProgressBar = ({ value, size }) => {
   const styles = STYLES_BY_SIZE[size];
