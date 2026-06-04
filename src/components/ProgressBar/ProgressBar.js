@@ -34,7 +34,6 @@ const STYLES_BY_SIZE = {
 };
 
 const Wrapper = styled.div`
-  width: 370px;
   height: var(--height);
   padding: var(--padding);
   border-radius: var(--border-radius);
