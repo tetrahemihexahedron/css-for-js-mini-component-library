@@ -6,16 +6,29 @@ import { COLORS } from "../../constants";
 import VisuallyHidden from "../VisuallyHidden";
 
 const ProgressBar = ({ value, size }) => {
+  const styles = STYLES_BY_SIZE[size];
   return (
-    <Wrapper role="progressbar" aria-valuenow={value}>
+    <Wrapper role="progressbar" aria-valuenow={value} style={styles}>
       <ValueBar value={value}></ValueBar>
     </Wrapper>
   );
 };
 
+const STYLES_BY_SIZE = {
+  small: {
+    "--height": 8 + "px",
+  },
+  medium: {
+    "--height": 12 + "px",
+  },
+  large: {
+    "--height": 24 + "px",
+  },
+};
+
 const Wrapper = styled.div`
   width: 370px;
-  height: 12px;
+  height: var(--height);
   border-radius: 4px;
   background-color: ${COLORS.transparentGray15};
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
