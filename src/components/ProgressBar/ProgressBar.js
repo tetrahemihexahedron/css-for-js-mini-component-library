@@ -27,14 +27,13 @@ const STYLES_BY_SIZE = {
     "--border-radius": 4 + "px",
   },
   large: {
-    "--height": 24 + "px",
+    "--height": 16 + "px",
     "--padding": 4 + "px",
     "--border-radius": 8 + "px",
   },
 };
 
 const Wrapper = styled.div`
-  height: var(--height);
   padding: var(--padding);
   border-radius: var(--border-radius);
   background-color: ${COLORS.transparentGray15};
@@ -42,14 +41,13 @@ const Wrapper = styled.div`
 `;
 
 const BarWrapper = styled.div`
-  height: 100%;
   border-radius: 4px;
   overflow: hidden;
 `;
 
 const ValueBar = styled.div`
   width: ${(p) => p.value}%;
-  height: 100%;
+  height: var(--height);
   background-color: ${COLORS.primary};
 `;
 
