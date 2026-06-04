@@ -18,6 +18,8 @@ const Select = ({ label, value, onChange, children }) => {
 const Wrapper = styled.select`
   appearance: none;
 
+  field-sizing: content;
+
   background-color: ${COLORS.transparentGray15};
   border: none;
   border-radius: 8px;
