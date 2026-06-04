@@ -9,7 +9,9 @@ const ProgressBar = ({ value, size }) => {
   const styles = STYLES_BY_SIZE[size];
   return (
     <Wrapper role="progressbar" aria-valuenow={value} style={styles}>
-      <ValueBar value={value}></ValueBar>
+      <BarWrapper>
+        <ValueBar value={value}></ValueBar>
+      </BarWrapper>
     </Wrapper>
   );
 };
@@ -17,21 +19,35 @@ const ProgressBar = ({ value, size }) => {
 const STYLES_BY_SIZE = {
   small: {
     "--height": 8 + "px",
+    "--padding": 0 + "px",
+    "--border-radius": 4 + "px",
   },
   medium: {
     "--height": 12 + "px",
+    "--padding": 0 + "px",
+    "--border-radius": 4 + "px",
   },
   large: {
     "--height": 24 + "px",
+    "--padding": 4 + "px",
+    "--border-radius": 8 + "px",
   },
 };
 
 const Wrapper = styled.div`
   width: 370px;
   height: var(--height);
-  border-radius: 4px;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
   background-color: ${COLORS.transparentGray15};
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
+  overflow: hidden;
+`;
+
+const BarWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
   overflow: hidden;
 `;
 
