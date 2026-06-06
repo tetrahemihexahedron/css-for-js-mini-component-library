@@ -31,7 +31,6 @@ const Wrapper = styled.div`
 const NativeSelect = styled.select`
   appearance: none;
 
-  position: relative;
   field-sizing: content;
 
   background-color: ${COLORS.transparentGray15};
@@ -50,6 +49,7 @@ const SelectIcon = styled(Icon)`
   height: ${(p) => p.size}px;
   width: ${(p) => p.size}px;
   margin-block: auto;
+  pointer-events: none;
 `;
 
 export default Select;
