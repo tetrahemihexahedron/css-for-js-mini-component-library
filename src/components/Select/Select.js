@@ -20,7 +20,7 @@ const Select = ({ label, value, onChange, children }) => {
 
 const Wrapper = styled.div`
   position: relative;
-  width: fit-content;
+  width: max-content;
   color: ${COLORS.gray700};
 
   &:hover {
