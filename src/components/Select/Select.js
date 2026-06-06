@@ -45,7 +45,11 @@ const NativeSelect = styled.select`
 const SelectIcon = styled(Icon)`
   position: absolute;
   right: 12px;
-  top: calc(50% - 12px);
+  top: 0;
+  bottom: 0;
+  height: ${(p) => p.size}px;
+  width: ${(p) => p.size}px;
+  margin-block: auto;
 `;
 
 export default Select;
