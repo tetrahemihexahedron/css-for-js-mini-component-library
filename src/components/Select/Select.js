@@ -11,9 +11,9 @@ const Select = ({ label, value, onChange, children }) => {
   return (
     <Wrapper>
       <SelectIcon id="chevron-down" size="24" strokeWidth="2" />
-      <SelectWrapper value={value} onChange={onChange}>
+      <NativeSelect value={value} onChange={onChange}>
         {children}
-      </SelectWrapper>
+      </NativeSelect>
     </Wrapper>
   );
 };
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const SelectWrapper = styled.select`
+const NativeSelect = styled.select`
   appearance: none;
 
   position: relative;
