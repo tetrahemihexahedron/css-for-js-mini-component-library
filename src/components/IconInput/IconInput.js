@@ -41,6 +41,11 @@ const STYLES_BY_SIZE = {
 
 const Wrapper = styled.div`
   position: relative;
+  color: ${COLORS.gray700};
+
+  &:hover {
+    color: ${COLORS.black};
+  }
 `;
 
 const TextInput = styled.input`
@@ -51,7 +56,7 @@ const TextInput = styled.input`
   border: none;
   border-bottom: var(--line-thickness) solid ${COLORS.black};
 
-  color: ${COLORS.gray700};
+  color: inherit;
   font-size: var(--font-size);
   font-weight: 700;
 
@@ -72,7 +77,7 @@ const PositionedIcon = styled(Icon)`
   left: 0;
   margin-block: auto;
 
-  color: ${COLORS.gray700};
+  color: inherit;
 
   pointer-events: none;
 `;
