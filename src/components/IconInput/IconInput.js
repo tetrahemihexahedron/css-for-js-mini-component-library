@@ -26,13 +26,13 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
 
 const STYLES_BY_SIZE = {
   small: {
-    "--line-size": 1 + "px",
+    "--line-thickness": 1 + "px",
     "--font-size": 14 / 16 + "rem",
     "--padding-left": 24 + "px",
     "--padding-block": 4 + "px",
   },
   large: {
-    "--line-size": 2 + "px",
+    "--line-thickness": 2 + "px",
     "--font-size": 18 / 16 + "rem",
     "--padding-left": 36 + "px",
     "--padding-block": 6 + "px",
@@ -49,7 +49,7 @@ const TextInput = styled.input`
   padding-block: var(--padding-block);
 
   border: none;
-  border-bottom: var(--line-size) solid ${COLORS.black};
+  border-bottom: var(--line-thickness) solid ${COLORS.black};
 
   color: ${COLORS.gray700};
   font-size: var(--font-size);
