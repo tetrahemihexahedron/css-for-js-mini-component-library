@@ -13,6 +13,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
 
   return (
     <Wrapper>
+      <VisuallyHidden>{label}</VisuallyHidden>
       <TextInput
         type="text"
         placeholder={placeholder}
