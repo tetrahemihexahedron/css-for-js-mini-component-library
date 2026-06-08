@@ -55,6 +55,10 @@ const TextInput = styled.input`
   font-size: var(--font-size);
   font-weight: 700;
 
+  &:focus-visible {
+    outline-offset: 1px;
+  }
+
   &::placeholder {
     color: ${COLORS.gray500};
     font-weight: 400;
