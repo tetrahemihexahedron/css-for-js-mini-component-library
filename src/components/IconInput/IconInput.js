@@ -29,13 +29,13 @@ const STYLES_BY_SIZE = {
     "--line-size": 1 + "px",
     "--font-size": 14 / 16 + "rem",
     "--padding-left": 24 + "px",
-    "--padding-bottom": 4 + "px",
+    "--padding-block": 4 + "px",
   },
   large: {
     "--line-size": 2 + "px",
     "--font-size": 18 / 16 + "rem",
     "--padding-left": 36 + "px",
-    "--padding-bottom": 6 + "px",
+    "--padding-block": 6 + "px",
   },
 };
 
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 const TextInput = styled.input`
   width: ${(p) => p.width}px;
   padding-left: var(--padding-left);
-  padding-bottom: var(--padding-bottom);
+  padding-block: var(--padding-block);
 
   border: none;
   border-bottom: var(--line-size) solid ${COLORS.black};
@@ -64,7 +64,9 @@ const TextInput = styled.input`
 const PositionedIcon = styled(Icon)`
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  margin-block: auto;
 
   color: ${COLORS.gray700};
 
