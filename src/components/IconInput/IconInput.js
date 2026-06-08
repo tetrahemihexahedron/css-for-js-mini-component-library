@@ -67,6 +67,8 @@ const PositionedIcon = styled(Icon)`
   left: 0;
 
   color: ${COLORS.gray700};
+
+  pointer-events: none;
 `;
 
 export default IconInput;
