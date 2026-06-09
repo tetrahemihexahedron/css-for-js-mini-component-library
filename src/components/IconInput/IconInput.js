@@ -14,8 +14,8 @@ const IconInput = ({ label, icon, width = 250, size, ...delegated }) => {
   return (
     <Wrapper>
       <VisuallyHidden>{label}</VisuallyHidden>
-      <TextInput type="text" width={width} style={styles} {...delegated} />
       <PositionedIcon id={icon} size={iconSize} strokeWidth={strokeWidth} />
+      <TextInput type="text" width={width} style={styles} {...delegated} />
     </Wrapper>
   );
 };
