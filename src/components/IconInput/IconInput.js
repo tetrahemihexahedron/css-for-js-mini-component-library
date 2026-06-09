@@ -6,33 +6,49 @@ import { COLORS } from "../../constants";
 import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden";
 
+const STYLES_BY_SIZE = {
+  small: {
+    lineThickness: 1,
+    fontSize: 14,
+    paddingLeft: 24,
+    paddingBlock: 4,
+    iconSize: 16,
+    iconStrokeWidth: 1,
+  },
+  large: {
+    lineThickness: 2,
+    fontSize: 18,
+    paddingLeft: 36,
+    paddingBlock: 6,
+    iconSize: 24,
+    iconStrokeWidth: 2,
+  },
+};
+
 const IconInput = ({ label, icon, width = 250, size, ...delegated }) => {
   const styles = STYLES_BY_SIZE[size];
-  const iconSize = size === "small" ? 16 : 24;
-  const strokeWidth = size === "small" ? 1 : 2;
 
   return (
     <Wrapper>
       <VisuallyHidden>{label}</VisuallyHidden>
-      <PositionedIcon id={icon} size={iconSize} strokeWidth={strokeWidth} />
-      <TextInput type="text" width={width} style={styles} {...delegated} />
+      <PositionedIcon
+        id={icon}
+        size={styles.iconSize}
+        strokeWidth={styles.iconStrokeWidth}
+      />
+      <TextInput
+        type="text"
+        width={width}
+        style={{
+          "--line-thickness": styles.lineThickness + "px",
+          "--font-size": styles.fontSize / 16 + "rem",
+          "--padding-left": styles.paddingLeft + "px",
+          "--padding-block": styles.paddingBlock + "px",
+        }}
+        {...delegated}
+      />
     </Wrapper>
   );
-};
-
-const STYLES_BY_SIZE = {
-  small: {
-    "--line-thickness": 1 + "px",
-    "--font-size": 14 / 16 + "rem",
-    "--padding-left": 24 + "px",
-    "--padding-block": 4 + "px",
-  },
-  large: {
-    "--line-thickness": 2 + "px",
-    "--font-size": 18 / 16 + "rem",
-    "--padding-left": 36 + "px",
-    "--padding-block": 6 + "px",
-  },
 };
 
 const Wrapper = styled.label`
