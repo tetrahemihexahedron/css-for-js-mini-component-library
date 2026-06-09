@@ -6,7 +6,7 @@ import { COLORS } from "../../constants";
 import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden";
 
-const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
+const IconInput = ({ label, icon, width = 250, size, ...delegated }) => {
   const styles = STYLES_BY_SIZE[size];
   const iconSize = size === "small" ? 16 : 24;
   const strokeWidth = size === "small" ? 1 : 2;
@@ -14,12 +14,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
   return (
     <Wrapper>
       <VisuallyHidden>{label}</VisuallyHidden>
-      <TextInput
-        type="text"
-        placeholder={placeholder}
-        width={width}
-        style={styles}
-      />
+      <TextInput type="text" width={width} style={styles} {...delegated} />
       <PositionedIcon id={icon} size={iconSize} strokeWidth={strokeWidth} />
     </Wrapper>
   );
