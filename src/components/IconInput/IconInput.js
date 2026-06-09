@@ -40,7 +40,7 @@ const STYLES_BY_SIZE = {
   },
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.label`
   position: relative;
   color: ${COLORS.gray700};
 
